@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PROJECT MANAGEMENT TOOL</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="adminDashboard.css" />
+  </head>
+  <body>
+    <header class="bg-primary text-white text-center py-4">
+      <h1>PROJECT MANAGEMENT TOOL</h1>
+    </header>
+    <div class="container mt-4">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Add User</h4>
+              <form id="projectForm">
+                <div class="form-group">
+                  <label for="userNameInput">User-Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="userNameInput"
+                    placeholder="User-Name"
+                  />
+                  <label for="password">Password</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="password"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="projectNameInput">Project Name</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="projectNameInput"
+                    placeholder="Project Name"
+                  />
+                </div>
+                <!-- Dropdown menu for active users -->
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="submit_button"
+                >
+                  SUBMIT
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h4 class="card-title">Project List</h4>
+              <table class="table">
+                <!-- Table headers, including Assignee -->
+                <thead>
+                  <tr>
+                    <th scope="col">S.No</th>
+                    <th scope="col">User-Name</th>
+                    <th scope="col">Password</th>
+                    <th scope="col">Project Name</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Duration</th>
+                  </tr>
+                </thead>
+                <tbody id="all_tasks"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="adminDashboard.js"></script>
+  </body>
+</html>
